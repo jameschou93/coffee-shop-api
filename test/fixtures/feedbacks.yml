@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  business_id: 1
+  comment: MyText
+  coffee_score: 1
+  satisfaction_score: 1
+  noise_level: 1
+
+two:
+  user_id: 1
+  business_id: 1
+  comment: MyText
+  coffee_score: 1
+  satisfaction_score: 1
+  noise_level: 1
