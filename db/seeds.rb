@@ -24,15 +24,15 @@ end
     phone: Faker::PhoneNumber.cell_phone,
     bathroom: true
   )
+end
 
-  30.times do
-    Feedback.create(
-      comment: Faker::Lorem.sentence(2),
-      coffee_score: rand(0..10),
-      satisfaction_score: rand(0..10),
-      noise_level: rand(0..10),
-      user_id: rand(1..10),
-      business_id: rand(1..20)
-    )
-  end
+30.times do
+  Feedback.create(
+    comment: Faker::Lorem.sentence(2),
+    coffee_score: rand(0..10),
+    satisfaction_score: rand(0..10),
+    noise_level: rand(0..10),
+    user_id: rand(1..10),
+    business_id: rand(1..20)
+  )
 end

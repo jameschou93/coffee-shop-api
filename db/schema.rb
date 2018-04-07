@@ -9,7 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-#nitish@tradewise.io
+
 ActiveRecord::Schema.define(version: 20180128221238) do
 
   # These are extensions that must be enabled in order to support this database
