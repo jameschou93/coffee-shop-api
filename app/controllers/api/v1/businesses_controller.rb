@@ -1,7 +1,7 @@
 class Api::V1::BusinessesController < ApplicationController
 
   def index
-    @businesses = Business.all
+    @businesses = Business.order("created_at DESC")
     render 'index.json.jbuilder'
   end
 
