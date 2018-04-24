@@ -15,6 +15,10 @@ class Api::V1::BusinessesController < ApplicationController
     end
   end
 
+  def update
+    @business =Business.find(params[:id])
+    @business.update_attributes(business_params)
+  end
 private
 
   def business_params
