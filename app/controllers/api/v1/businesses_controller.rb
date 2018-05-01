@@ -9,7 +9,7 @@ class Api::V1::BusinessesController < ApplicationController
     @business = Business.new(business_params)
 
     if @business.save
-      head(:ok)
+      render json: @business
     else
       head(:unprocessable_entity)
     end
@@ -18,10 +18,11 @@ class Api::V1::BusinessesController < ApplicationController
   def update
     @business =Business.find(params[:id])
     @business.update_attributes(business_params)
+    render json: @business
   end
 private
 
   def business_params
-    params.permit(:name, :address, :city, :state, :zip, :wifi, :phone, :bathroom)
+    params.require(:business).permit(:name, :address, :city, :state, :zip, :wifi, :phone, :bathroom)
   end
 end
