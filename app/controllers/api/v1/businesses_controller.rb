@@ -20,6 +20,16 @@ class Api::V1::BusinessesController < ApplicationController
     @business.update_attributes(business_params)
     render json: @business
   end
+
+  def destroy
+  @business = Business.find(params[:id])
+  if @business.destroy
+    head :no_content, status: :ok
+  else
+    render json: @business.errors, status: :unprocessable_entity
+  end
+
+end
 private
 
   def business_params
