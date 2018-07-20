@@ -7,5 +7,6 @@ json.array! @businesses.each do |business|
   json.zip business.zip
   json.wifi business.wifi
   json.phone business.phone
+  json.img_url business.img_url
   json.feedbacks business.feedbacks, :id, :comment, :coffee_score
 end

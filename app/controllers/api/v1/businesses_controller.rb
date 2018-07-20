@@ -16,7 +16,7 @@ class Api::V1::BusinessesController < ApplicationController
   end
 
   def update
-    @business =Business.find(params[:id])
+    @business = Business.find(params[:id])
     @business.update_attributes(business_params)
     render json: @business
   end
@@ -33,6 +33,6 @@ end
 private
 
   def business_params
-    params.require(:business).permit(:name, :address, :city, :state, :zip, :wifi, :phone, :bathroom)
+    params.require(:business).permit(:name, :address, :city, :state, :zip, :wifi, :phone, :bathroom, :img_url)
   end
 end
